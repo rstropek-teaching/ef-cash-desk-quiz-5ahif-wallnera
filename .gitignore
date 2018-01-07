@@ -3,3 +3,9 @@
 ################################################################################
 
 /.vs/CashDesk/v15/Server/sqlite3
+/.vs/CashDesk/v15
+/CashDesk/bin/Debug/netcoreapp2.0
+/CashDesk/obj
+/CashDesk.Tests/bin/Debug/netcoreapp2.0
+/CashDesk.Tests/obj
+/.vs
