@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CashDesk.Model
 {
-    class Member:IMember
+    public class Member:IMember
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

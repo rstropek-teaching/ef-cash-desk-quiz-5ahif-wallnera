@@ -31,7 +31,7 @@ namespace CashDesk.Tests
         {
             using (var dal = new DataAccess())
             {
-                 dal.InitializeDatabaseAsync();
+                dal.InitializeDatabaseAsync();
                 var memberNumber = dal.AddMemberAsync("Foo", "AlreadyMemberJoining", DateTime.Today.AddYears(-18));
                 dal.JoinMemberAsync(memberNumber);
                 await Assert.ThrowsAsync<AlreadyMemberException>(async () => dal.JoinMemberAsync(memberNumber));

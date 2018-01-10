@@ -3,13 +3,24 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CashDesk.Model
 {
-    class Deposit:IDeposit
+    public class Deposit:IDeposit
     {
-        [Required]
-        public IMembership Membership { get; set; }
+        [NotMapped]
+        IMembership IDeposit.Membership
+        {
+            get
+            {
+                return Membership;
+            }
+        }
+
+        [Key]
+        public int DepId { get; set; }
 
         [Required]
-        // greater than 0----------------------
+        public Membership Membership { get; set; }
+
+        [Required]
         public decimal Amount { get; set; }
     }
 }

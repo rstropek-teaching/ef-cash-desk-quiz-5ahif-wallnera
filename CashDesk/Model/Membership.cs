@@ -4,15 +4,27 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CashDesk.Model
 {
-    class Membership:IMembership
+    public class Membership : IMembership
     {
+        [NotMapped]
+        IMember IMembership.Member
+        {
+            get
+            {
+                return Member;
+            }
+        }
+
+        [Key]
+        public int MembershipId { get; set; }
+
         [Required]
-        public IMember Member { get; set; }
+        public Member Member { get; set; }
 
         [Required]
         public DateTime Begin { get; set; }
          
-        //greater than Begin ----------------
+
         public DateTime End { get; set; }
     }
 }

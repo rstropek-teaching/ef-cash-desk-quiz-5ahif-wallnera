@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CashDesk.Model;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -240,7 +241,7 @@ namespace CashDesk
         /// <remarks>
         /// The membership ends at the time of calling this method.
         /// </remarks>
-        IMembership CancelMembershipAsync(int memberNumber);
+        Task<IMembership> CancelMembershipAsync(int memberNumber);
 
         /// <summary>
         /// Deposit the specified amount for the specified member

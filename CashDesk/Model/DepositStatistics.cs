@@ -2,7 +2,7 @@
 
 namespace CashDesk.Model
 {
-    class DepositStatistics : IDepositStatistics
+    public class DepositStatistics : IDepositStatistics
     {
         public IMember Member { get; set; }
         public int Year { get; set; }
